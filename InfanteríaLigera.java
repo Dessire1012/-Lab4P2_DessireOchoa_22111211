@@ -4,7 +4,7 @@ package Lab4P2_DessireOchoa_22111211;
 
 public class InfanteríaLigera extends Soldados{
     
-    private Armas armaBlanca = new Armas();
+    private ArmaBlanca armablanca;
 
     public InfanteríaLigera() {
         super();
@@ -14,26 +14,17 @@ public class InfanteríaLigera extends Soldados{
         super(nombre, edad, tiempoEjercito, rango, vida);
     }
 
-
-    public Armas getArmaBlanca() {
-        return armaBlanca;
+    public ArmaBlanca getArmablanca() {
+        return armablanca;
     }
 
-    public void setArmaBlanca(Armas armaBlanca) {
-        this.armaBlanca = armaBlanca;
+    public void setArmablanca(ArmaBlanca armablanca) {
+        this.armablanca = armablanca;
     }
 
     @Override
     public String toString() {
-        return "InfanteriaPesada{" + "armaBlanca=" + armaBlanca + '}';
+        return  super.toString()+"InfanteraLigera{" + "armablanca=" + armablanca + '}';
     }
-    
-    public int getPtsArma (){
-        return armaBlanca.getDaño();
-    }
-    
-    public void setPtsArma (){
-        armaBlanca.setDaño(50);
-    }
-    
+
 }

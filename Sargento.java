@@ -2,7 +2,7 @@ package Lab4P2_DessireOchoa_22111211;
 
 public class Sargento extends Soldados {
 
-    private Armas escopeta = new Armas();
+    private Escopeta escopeta ;
 
     public Sargento() {
     }
@@ -11,21 +11,17 @@ public class Sargento extends Soldados {
         super(nombre, edad, tiempoEjercito, rango, vida);
     }
 
-    public Armas getEscopeta() {
+    public Escopeta getEscopeta() {
         return escopeta;
     }
 
-    public void setEscopeta(Armas escopeta) {
+    public void setEscopeta(Escopeta escopeta) {
         this.escopeta = escopeta;
     }
 
-    public int getPtsArma() {
-        return escopeta.getDaño();
+    @Override
+    public String toString() {
+        return  super.toString()+"Sargento{" + "escopeta=" + escopeta + '}';
     }
-
-    public void setPtsArma() {
-       escopeta.setDaño(140);
-    }
-    
 
 }

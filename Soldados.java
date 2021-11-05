@@ -57,9 +57,13 @@ public class Soldados {
         return vida;
     }
 
-    public void setVida(int vida) {
-        if (vida <= 100 && vida >= 400)
-        this.vida = vida;
+    public void setVida(int vida) throws ExcepcionS{
+        if (vida >= 100 && vida <= 400)
+            this.vida = vida;
+        else {
+            throw new ExcepcionS ("La vida no entra en los parametros");
+        }
+
     }
 
     @Override

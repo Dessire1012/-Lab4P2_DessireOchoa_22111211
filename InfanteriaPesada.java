@@ -3,7 +3,7 @@ package Lab4P2_DessireOchoa_22111211;
 
 
 public class InfanteriaPesada extends Soldados{
-    private Armas bomba = new Armas();
+    private Bomba bomba;
 
     public InfanteriaPesada() {
         super();
@@ -13,26 +13,17 @@ public class InfanteriaPesada extends Soldados{
         super(nombre, edad, tiempoEjercito, rango, vida);
     }
 
-
-    public Armas getBomba() {
+    public Bomba getBomba() {
         return bomba;
     }
 
-    public void setBomba(Armas bomba) {
+    public void setBomba(Bomba bomba) {
         this.bomba = bomba;
-    }
-    
-    public int getPtsArma (){
-        return bomba.getDaño();
-    }
-    
-    public void setPtsArma (){
-        bomba.setDaño(150);
     }
 
     @Override
     public String toString() {
-        return "InfanteriaPesada{" + "bomba=" + bomba + '}';
+        return  super.toString()+"InfanteriaPesada{" + "bomba=" + bomba + '}';
     }
 
 

@@ -6,14 +6,14 @@ public class Zonas {
     
     private String nombre;
     private int tamaño;
-    private int coodernadaX;
-    private int coodernadaY;
+    private int coordenadaX;
+    private int coordenadaY;
 
-    public Zonas(String nombre, int tamaño, int coodernadaX, int coodernadaY) {
+    public Zonas(String nombre, int tamaño, int coordenadaX, int coordenadaY) {
         this.nombre = nombre;
         this.tamaño = tamaño;
-        this.coodernadaX = coodernadaX;
-        this.coodernadaY = coodernadaY;
+        this.coordenadaX = coordenadaX;
+        this.coordenadaY = coordenadaY;
     }
 
     public Zonas() {
@@ -31,30 +31,43 @@ public class Zonas {
         return tamaño;
     }
 
-    public void setTamaño(int tamaño) {
-        this.tamaño = tamaño;
+    public void setTamaño(int tamaño) throws ExcepcionS {
+        if(tamaño >= 100 && tamaño <= 400){
+           this.tamaño = tamaño; 
+        }else {
+            throw new ExcepcionS ("El tamaño no entra en los parametros");
+        }
     }
 
-    public int getCoodernadaX() {
-        return coodernadaX;
+    public int getCoordenadaX() {
+        return coordenadaX;
     }
 
-    public void setCoodernadaX(int coodernadaX) {
-        this.coodernadaX = coodernadaX;
+    public void setCoordenadaX(int coordenadaX) throws ExcepcionS{
+        if (coordenadaX <= 100){
+              this.coordenadaX = coordenadaX;
+        }else {
+            throw new ExcepcionS ("La coordenada no entra en los parametros");
+        }
     }
 
-    public int getCoodernadaY() {
-        return coodernadaY;
+    public int getCoordenadaY() {
+        return coordenadaY;
     }
 
-    public void setCoodernadaY(int coodernadaY) {
-        this.coodernadaY = coodernadaY;
+    public void setCoordenadaY(int coordenadaY)throws ExcepcionS{
+        if (coordenadaY <= 100){
+            this.coordenadaY = coordenadaY;
+        } else {
+            throw new ExcepcionS ("La coordenada no entra en los parametros");
+        }
     }
 
     @Override
     public String toString() {
-        return "Zonas{" + "nombre=" + nombre + ", tama\u00f1o=" + tamaño + ", coodernadaX=" + coodernadaX + ", coodernadaY=" + coodernadaY + '}';
+        return "Zonas{" + "nombre=" + nombre + ", tama\u00f1o=" + tamaño + ", coordenadaX=" + coordenadaX + ", coordenadaY=" + coordenadaY + '}';
     }
 
+    
     
 }

@@ -5,6 +5,11 @@ public class Armas {
     private String nombre;
     private int daño;
 
+    public Armas(String nombre, int daño) {
+        this.nombre = nombre;
+        this.daño = daño;
+    }
+
     public String getNombre() {
         return nombre;
     }
