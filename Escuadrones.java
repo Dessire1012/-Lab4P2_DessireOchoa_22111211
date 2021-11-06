@@ -40,10 +40,7 @@ public class Escuadrones {
     public void setListaSoldados(ArrayList<Soldados> listaSoldados) {
         this.listaSoldados = listaSoldados;
     }
-    
-   public void addSoldado (String nombre, int edad, int tiempoEjercito, String rango, int vida){
-       listaSoldados.add(new Soldados (nombre, edad, tiempoEjercito, rango, vida));
-   }
+  
    
    public void addInfanteríaLigera(String nombre, int edad, int tiempoEjercito, String rango, int vida) {
         listaSoldados.add(new InfanteríaLigera(nombre, edad, tiempoEjercito, rango, vida));
@@ -69,6 +66,6 @@ public class Escuadrones {
     public String toString() {
         return "Escuadrones{" + "nombre=" + nombre + ", ZonasConquistadas=" + ZonasConquistadas + ", listaSoldados=" + listaSoldados + '}';
     }
-    
+
     
 }

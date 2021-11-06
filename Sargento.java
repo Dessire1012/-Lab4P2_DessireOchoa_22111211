@@ -23,5 +23,6 @@ public class Sargento extends Soldados {
     public String toString() {
         return  super.toString()+"Sargento{" + "escopeta=" + escopeta + '}';
     }
-
+    
+   
 }

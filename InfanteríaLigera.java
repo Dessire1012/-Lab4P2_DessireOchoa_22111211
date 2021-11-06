@@ -26,5 +26,6 @@ public class InfanteríaLigera extends Soldados{
     public String toString() {
         return  super.toString()+"InfanteraLigera{" + "armablanca=" + armablanca + '}';
     }
-
+    
+    
 }

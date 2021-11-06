@@ -52,4 +52,9 @@ public class SuperSoldado extends Soldados {
         return  super.toString()+"SuperSoldado{" + "armaBlanca=" + armaBlanca + ", bomba=" + bomba + ", escopeta=" + escopeta + ", lanzallamas=" + lanzallamas + '}';
     }
 
+    private int atacar (Soldados soldado){
+        return 0;
+    }
+    
+   
 }

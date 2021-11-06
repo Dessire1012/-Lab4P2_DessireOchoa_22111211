@@ -2,7 +2,7 @@
 package Lab4P2_DessireOchoa_22111211;
 
 
-public class InfanteriaPesada extends Soldados{
+public  class InfanteriaPesada extends Soldados{
     private Bomba bomba;
 
     public InfanteriaPesada() {
@@ -24,6 +24,11 @@ public class InfanteriaPesada extends Soldados{
     @Override
     public String toString() {
         return  super.toString()+"InfanteriaPesada{" + "bomba=" + bomba + '}';
+    }
+    
+    
+    public int atacar (Soldados soldado){
+        return 0;
     }
 
 

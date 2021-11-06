@@ -24,5 +24,5 @@ public class Capitan extends Soldados {
     public String toString() {
         return  super.toString()+"Capitan{" + "lanzallamas=" + lanzallamas + '}';
     }
-
+    
 }

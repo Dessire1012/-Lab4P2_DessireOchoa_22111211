@@ -2,7 +2,7 @@
 package Lab4P2_DessireOchoa_22111211;
 
 
-public class Soldados {
+public class  Soldados {
     
     private String nombre;
     private int edad;
@@ -70,5 +70,7 @@ public class Soldados {
     public String toString() {
         return "Soldados{" + "nombre=" + nombre + ", edad=" + edad + ", tiempoEjercito=" + tiempoEjercito + ", rango=" + rango + ", vida=" + vida + '}';
     }
+    
+    
     
 }
