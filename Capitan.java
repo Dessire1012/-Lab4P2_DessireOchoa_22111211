@@ -2,7 +2,7 @@ package Lab4P2_DessireOchoa_22111211;
 
 public class Capitan extends Soldados {
 
-    private Armas lanzallamas;
+    private Lanzallamas lanzallamas;
 
     public Capitan(String nombre, int edad, int tiempoEjercito, String rango, int vida) {
         super(nombre, edad, tiempoEjercito, rango, vida);
@@ -12,17 +12,31 @@ public class Capitan extends Soldados {
         super();
     }
 
-    public Armas getLanzallamas() {
+    public Lanzallamas getLanzallamas() {
         return lanzallamas;
     }
 
-    public void setLanzallamas(Armas lanzallamas) {
+    public void setLanzallamas(Lanzallamas lanzallamas) {
         this.lanzallamas = lanzallamas;
     }
 
     @Override
     public String toString() {
-        return  super.toString()+"Capitan{" + "lanzallamas=" + lanzallamas + '}';
+        return "Capitan{" + "lanzallamas=" + lanzallamas + '}';
+    }
+    
+    @Override
+    public double atacar (Soldados s){
+        
+        if (s instanceof Sargento){
+              return (lanzallamas.getDaño() * 0.15);
+        }else if (s instanceof InfanteriaPesada){
+            return (lanzallamas.getDaño() * 0.2);
+        }else if (s instanceof InfanteríaLigera){
+            return (lanzallamas.getDaño() * 0.25);
+        }else
+            return lanzallamas.getDaño();
+             
     }
     
 }

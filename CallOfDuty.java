@@ -74,6 +74,7 @@ public class CallOfDuty {
                     System.out.println("\nIngrese el nombre del escuadron");
                     nombre = leer.next();
                     Escuadron.add(new Escuadrones(nombre));
+
                     break;
                 case 4:
 

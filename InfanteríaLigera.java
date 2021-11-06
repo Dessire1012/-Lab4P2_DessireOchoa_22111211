@@ -27,5 +27,8 @@ public class InfanteríaLigera extends Soldados{
         return  super.toString()+"InfanteraLigera{" + "armablanca=" + armablanca + '}';
     }
     
-    
+    @Override
+    public double atacar (Soldados s){
+        return armablanca.getDaño();
+    }
 }

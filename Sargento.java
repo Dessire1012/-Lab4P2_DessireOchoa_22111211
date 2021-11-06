@@ -24,5 +24,15 @@ public class Sargento extends Soldados {
         return  super.toString()+"Sargento{" + "escopeta=" + escopeta + '}';
     }
     
-   
+   @Override
+    public double atacar (Soldados s){
+        
+        if (s instanceof InfanteriaPesada){
+              return (escopeta.getDaño() * 0.1);
+        }else if (s instanceof InfanteríaLigera){
+            return (escopeta.getDaño() * 0.15);
+        }else 
+             return escopeta.getDaño();
+
+    }
 }

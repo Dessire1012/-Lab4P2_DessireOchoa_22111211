@@ -2,10 +2,10 @@ package Lab4P2_DessireOchoa_22111211;
 
 public class SuperSoldado extends Soldados {
 
-    private Armas armaBlanca;
-    private Armas bomba;
-    private Armas escopeta;
-    private Armas lanzallamas;
+    private ArmaBlanca armaBlanca;
+    private Bomba bomba;
+    private Escopeta escopeta;
+    private Lanzallamas lanzallamas;
 
     public SuperSoldado(String nombre, int edad, int tiempoEjercito, String rango, int vida) {
         super(nombre, edad, tiempoEjercito, rango, vida);
@@ -15,46 +15,57 @@ public class SuperSoldado extends Soldados {
         super();
     }
 
-    public Armas getArmaBlanca() {
+    public ArmaBlanca getArmaBlanca() {
         return armaBlanca;
     }
 
-    public void setArmaBlanca(Armas armaBlanca) {
+    public void setArmaBlanca(ArmaBlanca armaBlanca) {
         this.armaBlanca = armaBlanca;
     }
 
-    public Armas getBomba() {
+    public Bomba getBomba() {
         return bomba;
     }
 
-    public void setBomba(Armas bomba) {
+    public void setBomba(Bomba bomba) {
         this.bomba = bomba;
     }
 
-    public Armas getEscopeta() {
+    public Escopeta getEscopeta() {
         return escopeta;
     }
 
-    public void setEscopeta(Armas escopeta) {
+    public void setEscopeta(Escopeta escopeta) {
         this.escopeta = escopeta;
     }
 
-    public Armas getLanzallamas() {
+    public Lanzallamas getLanzallamas() {
         return lanzallamas;
     }
 
-    public void setLanzallamas(Armas lanzallamas) {
+    public void setLanzallamas(Lanzallamas lanzallamas) {
         this.lanzallamas = lanzallamas;
     }
 
     @Override
     public String toString() {
-        return  super.toString()+"SuperSoldado{" + "armaBlanca=" + armaBlanca + ", bomba=" + bomba + ", escopeta=" + escopeta + ", lanzallamas=" + lanzallamas + '}';
+        return "SuperSoldado{" + "armaBlanca=" + armaBlanca + ", bomba=" + bomba + ", escopeta=" + escopeta + ", lanzallamas=" + lanzallamas + '}';
     }
 
-    private int atacar (Soldados soldado){
-        return 0;
+    @Override
+    public double atacar(Soldados s) {
+
+        if (s instanceof Capitan) {
+            return lanzallamas.getDaño() * 0.3;
+
+        } else if (s instanceof Sargento) {
+            return escopeta.getDaño() * 0.35;
+
+        } else if (s instanceof InfanteriaPesada) {
+            return bomba.getDaño() * 0.4;
+
+        } else 
+            return armaBlanca.getDaño() * 0.5;
     }
-    
-   
+
 }

@@ -2,7 +2,7 @@
 package Lab4P2_DessireOchoa_22111211;
 
 
-public class  Soldados {
+public abstract class  Soldados {
     
     private String nombre;
     private int edad;
@@ -71,6 +71,8 @@ public class  Soldados {
         return "Soldados{" + "nombre=" + nombre + ", edad=" + edad + ", tiempoEjercito=" + tiempoEjercito + ", rango=" + rango + ", vida=" + vida + '}';
     }
     
-    
+    public double atacar (Soldados s){
+        return 0;
+    }
     
 }

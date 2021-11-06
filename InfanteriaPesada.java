@@ -26,10 +26,13 @@ public  class InfanteriaPesada extends Soldados{
         return  super.toString()+"InfanteriaPesada{" + "bomba=" + bomba + '}';
     }
     
-    
-    public int atacar (Soldados soldado){
-        return 0;
+    @Override
+    public double atacar (Soldados s){
+        if (s instanceof InfanteríaLigera){
+              return bomba.getDaño() * 0.1;
+        }else
+            return bomba.getDaño();
+      
     }
-
-
+    
 }
